@@ -1,0 +1,44 @@
+:root {
+  --boxShadow: 1px 1px 10px 1px #857e7e;
+  --paddingButton: 2rem;
+  --paddingCardY: 1rem 0 1rem 0;
+  --paddingCardX: 0 1rem 0 1rem;
+  --gapRow: 1rem;
+  --borderRadius: 0.35rem;
+  --maxWidthContainer: 800px;
+  --outline: 1px solid #000;
+  --centerMargin: 0 auto;
+  --animationButton: background-color 0.4s ease-in-out, color 0.5s ease-in,
+    outline 0.3s ease-in;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: #3a2929;
+  font-family: 'Open Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  outline: none;
+  border: none;
+  outline: var(--outline);
+  border-radius: var(--borderRadius);
+  padding: 0.5rem 0.8rem;
+  min-height: var(--paddingButton);
+  max-height: var(--paddingButton);
+  font-size: 1rem;
+}

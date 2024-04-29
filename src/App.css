@@ -1,0 +1,140 @@
+header {
+  padding-top: 2rem;
+  text-align: center;
+  margin: var(--centerMargin);
+  padding-bottom: 2rem;
+}
+
+.section-buttons {
+  box-shadow: var(--boxShadow);
+  max-width: var(--maxWidthContainer);
+  margin: var(--centerMargin);
+  padding: var(--paddingButton);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gapRow);
+}
+
+.success {
+  background-color: #11bb14;
+  color: #fff;
+  transition: var(--animationButton);
+
+  &:hover {
+    outline: none;
+    background-color: #dbfddb;
+    color: #11bb14;
+  }
+}
+
+.error {
+  background-color: #e81a1a;
+  color: #fff;
+  transition: var(--animationButton);
+
+  &:hover {
+    outline: none;
+    background-color: #ff9f9f;
+    color: #e81a1a;
+  }
+}
+
+.info {
+  background-color: #1e84d9;
+  color: #fff;
+  transition: var(--animationButton);
+
+  &:hover {
+    outline: none;
+    background-color: #bfdcf8;
+    color: #1e84d9;
+  }
+}
+
+.warning {
+  background-color: #dba317;
+  color: #faf4c7;
+  transition: var(--animationButton);
+
+  &:hover {
+    outline: none;
+    background-color: #faf4c7;
+    color: #dba317;
+  }
+}
+
+/* Toast */
+
+.toast-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  max-width: 25rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.toast.card-success {
+  background-color: #19ff79b6;
+}
+
+.toast.card-error {
+  background-color: #e81a1a;
+}
+.toast.card-warning {
+  background-color: #dba317;
+}
+.toast.card-info {
+  background-color: #1e84d9;
+}
+.toast {
+  margin: 0 1rem 1rem 0;
+  border-radius: var(--borderRadius);
+  display: flex;
+  flex-direction: column;
+  max-height: 8rem;
+  padding: var(--paddingCardY);
+  color: #ffffff;
+  animation: aperture;
+  animation-duration: 200ms;
+  animation-timing-function: ease-out;
+}
+
+.toast-header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--paddingCardX);
+  border-bottom: var(--outline);
+  font-size: 1.1rem;
+}
+
+.toast-icon.icon {
+  color: #404540;
+}
+
+.toast-body {
+  padding: var(--paddingCardX);
+  padding-top: 1rem;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  & .toast-text {
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@keyframes aperture {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
